@@ -9,6 +9,7 @@ import bunnyYes from "./animations/bunnyYes.json";
 import bunnyPunch from "./animations/bunnyPunch.json";
 import Button from "./components/Button";
 import dogKiss from "./animations/dogKiss.json"
+import { isMobile } from "react-device-detect";
 
 const getRandomPosition = () => {
   if (typeof window !== 'undefined') {
@@ -25,6 +26,15 @@ const getRandomPosition = () => {
 }
 
 function Home() {
+
+  if (isMobile) {
+    return (
+      <div style={{ textAlign: "center", padding: "50px" }}>
+        <h1>Open in laptop you stupeeeeeed!.</h1>
+      </div>
+    );
+  }
+
   const bunnyCryOptions = {
     loop: true,
     autoplay: true,
