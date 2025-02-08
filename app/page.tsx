@@ -27,14 +27,6 @@ const getRandomPosition = () => {
 
 function Home() {
 
-  if (isMobile) {
-    return (
-      <div style={{ textAlign: "center", padding: "50px" }}>
-        <h1>Open in laptop you stupeeeeeed!.</h1>
-      </div>
-    );
-  }
-
   const bunnyCryOptions = {
     loop: true,
     autoplay: true,
@@ -84,6 +76,14 @@ function Home() {
     setHovered(hoverState);
 
   };
+
+  if (isMobile) {
+    return (
+      <div style={{ textAlign: "center", padding: "50px" }}>
+        <h1>Open in laptop you stupeeeeeed!.</h1>
+      </div>
+    );
+  }
 
   return (
     <StyledHome data-testid="container">
